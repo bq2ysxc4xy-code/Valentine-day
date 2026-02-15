@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Sara 💖</title>
+
+<style>
+body{
+    margin:0;
+    text-align:center;
+    font-family:'Comic Sans MS', cursive;
+    background: linear-gradient(45deg,#ff9a9e,#fad0c4,#fbc2eb,#a6c1ee);
+    background-size:400% 400%;
+    animation: bg 8s infinite alternate;
+    color:white;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    100%{background-position:100% 50%;}
+}
+
+.page{display:none; padding:40px;}
+.active{display:block;}
+
+button{
+    padding:15px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    margin:10px;
+}
+
+.yes{background:#ff4d6d;color:white;}
+.no{background:black;color:white;position:relative;}
+
+img{width:200px;margin-top:20px;}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="page1">
+<h1>Sara 💕</h1>
+<p>
+kanbghek bzzaf bzzaf asaratii zwena ntmna hadshi y3jbek wakha ra ki walo wlkin bghiit nqad lekk shi haja w sf 💖  
+ohibokk bzzaf nti heya ahsan hajaa trat leyaaaa fhyati ma eamrni nlqa shi insana fhalk  
+im so lucky to havee u muah muah muah muah 💋💋💋💋
+</p>
+
+<h2>Shkon heya ahssan bent fl3alam? 😏</h2>
+
+<button class="yes" onclick="nextPage(2)">Sara 💖</button>
+<button class="no" onmouseover="move(this)">Chi bent okhra 👀</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+<h2>Ziad taybghekk bzzaf wla shwia? 😌💕</h2>
+
+<button class="yes" onclick="nextPage(3)">BZZZAAAF 💖💖💖</button>
+<button class="no" onmouseover="move(this)">Shwia bzzaf 😂</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+<h1>Good girl 😍💖</h1>
+<p>Jawbti 3la kolshi s7e7 😌✨ Tstahli wardaaa w kiss kbiraaaa 💋💋💋</p>
+
+<img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
+<h1>💋💋💋💋💋💋💋</h1>
+</div>
+
+<script>
+function nextPage(num){
+    document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+    document.getElementById('page'+num).classList.add('active');
+}
+
+function move(btn){
+    btn.style.position='absolute';
+    btn.style.top=Math.random()*80+'%';
+    btn.style.left=Math.random()*80+'%';
+}
+</script>
+
+</body>
+</html>
